@@ -7,14 +7,11 @@ commonLabels:
 
 resources:
 # wave 0
-- gp3-remove-default.yaml
-- ceph-rbd-set-default.yaml
-# wave 1
 - workbench-imagestream.yaml
 - workbench-vscode-is.yaml
 - odhdashboardconfig.yaml
 - accelerator-profile.yaml
-# wave 2
+# wave 1
 - images-puller.yaml
 
 
