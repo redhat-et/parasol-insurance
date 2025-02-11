@@ -7,3 +7,28 @@ https://access.redhat.com/solutions/6989516
 ```
 oc -n openshift-gitops patch argocd openshift-gitops --type=merge --patch "$(cat policies.yaml)"
 ```
+
+
+## Clusterrole
+
+Modify and add the following 
+
+```
+oc edit ClusterRole/openshift-gitops-openshift-gitops-argocd-application-controller
+```
+
+
+```
+- apiGroups:
+  - project.openshift.io
+  resources:
+  - '*'
+  verbs:
+  - '*'
+- apiGroups:
+  - serving.kserve.io
+  resources:
+  - '*'
+  verbs:
+  - '*'
+```

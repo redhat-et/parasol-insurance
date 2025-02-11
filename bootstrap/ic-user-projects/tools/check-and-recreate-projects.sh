@@ -36,7 +36,7 @@ while true; do
 done
 
 
-for USER_PROJECT in "${projects_without_running_pods[@]}"; 
+for USER_PROJECT in "${projects_without_running_pods[@]}";
 do
 
 # Assume username and user project is the same
@@ -307,7 +307,7 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: ocs-storagecluster-ceph-rbd
+  storageClassName: ocs-external-storagecluster-ceph-rbd
   volumeMode: Filesystem
 EOF
 
