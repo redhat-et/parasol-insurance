@@ -8,11 +8,6 @@ spec:
   - list:
       elements:
       - cluster: in-cluster
-        name: ic-shared-minio-app
-        repoURL: https://github.com/rh-aiservices-bu/parasol-insurance.git
-        targetRevision: main
-        path: bootstrap/ic-shared-minio
-      - cluster: in-cluster
         name: ic-shared-database-app
         repoURL: https://github.com/rh-aiservices-bu/parasol-insurance.git
         targetRevision: main
