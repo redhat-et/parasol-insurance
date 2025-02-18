@@ -305,6 +305,7 @@ spec:
             resources:
               requests:
                 storage: 5Gi
+            storageClassName: ocs-storagecluster-ceph-rbd
             volumeMode: Filesystem
           EOF
 
@@ -520,6 +521,6 @@ spec:
           EOF
 
           sleep 20
-
+          
           done
       restartPolicy: Never
