@@ -9,8 +9,8 @@ metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
-  accessModes:
-    - ReadWriteMany
+#  accessModes:
+#    - ReadWriteMany
   resources:
     requests:
       storage: 10Gi
