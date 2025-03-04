@@ -1,5 +1,9 @@
 # Parasol Insurance Workshop
 
+## For ET Developers
+New code is not to be merged into the main branch. Refer to the example git branching workflow [here](docs/dev-notes/dev-branching-workflow.md) and other developer notes in the [docs folder](docs/dev-notes/). 
+
+
 ## Introduction
 
 This repository contains the code, instructions, resources and materials associated with the Lab called **Parasol Insurance Workshop**.
