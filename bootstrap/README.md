@@ -14,5 +14,5 @@ oc -n openshift-gitops patch argocd openshift-gitops --type=merge --patch "$(cat
 Modify and add the following. This will allow for the management of knative and project assets.
 
 ```
-oc create -f additional-cluster-role.yaml
+oc apply -f additional-cluster-role.yaml
 ```

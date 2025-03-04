@@ -200,8 +200,8 @@ spec:
         args: ["-f", "/dev/null"]
         resources:
           limits:
-            memory: 20Mi
+            memory: 40Mi
           requests:
-            cpu: 10m
-            memory: 10Mi
+            cpu: 20m
+            memory: 20Mi
 
