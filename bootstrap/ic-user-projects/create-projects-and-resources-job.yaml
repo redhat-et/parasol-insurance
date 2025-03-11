@@ -528,7 +528,7 @@ spec:
                   args:
                   - -ec
                   - |-
-                    pod_name=\$(oc get pods --selector=app=$WORKBENCH_NAME -o jsonpath='{.items[0].metadata.name}') && oc exec \$pod_name -- bash -c "git clone https://github.com/rh-aiservices-bu/parasol-insurance && cd parasol-insurance && git checkout $BRANCH_NAME"
+                    pod_name=\$(oc get pods --selector=app=$WORKBENCH_NAME -o jsonpath='{.items[0].metadata.name}') && oc exec \$pod_name -- bash -c "git clone https://github.com/redhat-et/parasol-insurance && cd parasol-insurance && git checkout $BRANCH_NAME"
                 restartPolicy: Never
           EOF
 
@@ -540,8 +540,8 @@ spec:
             annotations:
               openshift.io/description: ''
               openshift.io/display-name: Data Pipeline
-              volume.beta.kubernetes.io/storage-provisioner: openshift-storage.cephfs.csi.ceph.com
-              volume.kubernetes.io/storage-provisioner: openshift-storage.cephfs.csi.ceph.com
+              volume.beta.kubernetes.io/storage-provisioner: nfs.csi.k8s.io 
+              volume.kubernetes.io/storage-provisioner: nfs.csi.k8s.io
             name: processing-pipeline-storage
             namespace: $USER_PROJECT
             finalizers:
@@ -554,7 +554,7 @@ spec:
             resources:
               requests:
                 storage: 1Gi
-            storageClassName: ocs-storagecluster-cephfs
+            storageClassName: nfs-csi
             volumeMode: Filesystem
           EOF
 
