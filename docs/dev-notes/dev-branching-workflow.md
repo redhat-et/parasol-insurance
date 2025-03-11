@@ -38,7 +38,7 @@ git checkout -b fix --track upstream/main-rhoai-2.13
 
 git push origin fix
 
-1. Now on github, when you see the option to create a PR, you need to change the destination/ target branch of the PR to be the main-rhoai-2.13 branch of the upstream repo redhat-et/parasol-insurance. (and not the default draft PR suggestion by github which will point to the main branch as the destination branch)
+1. Now on github, when you see the option to create a PR, you need to change the destination/ target branch of the PR to be the main-rhoai-2.13 branch of the upstream repo redhat-et/parasol-insurance. (and not the default draft PR suggestion by github which will point to the main branch as the destination branch, unless the repo maintainers have configured main-rhoai-2.13 as the default branch for the upstream repo, in which case this should already be set correctly). 
 
 1. After PR review and merge, if you navigate to the upstream repo
 (redhat-et/parasol-insurance) on github, you will also see a suggestion to create a PR to merge changes into the main branch. DO NOT follow this suggestion. Ignore it since per our current project branching plan, we are keeping our final code in the main-rhoai-2.13 branch and not in main.
